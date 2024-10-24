@@ -26,4 +26,12 @@ class Calculette:
         egal = self.g.afficherTexte("=",260,640,"white",40)
         self.g.attendreClic()
 
+    def calcul(self):
+        clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
+        while clic != True:
+            click = self.g.attendreClic()
+
+
+
+
 c = Calculette()
