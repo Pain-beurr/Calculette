@@ -29,11 +29,32 @@ class Calculette:
         self.g.attendreClic()
 
     def calcul(self):
-        resultat = 0
+        val1 = 0
+        val2 = 0
         clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
         while clic != True:
             click = self.g.attendreClic()
 
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 60 < click.x < 140 and 360 < click.y < 440:
+            val1 = 1
+        if 160 < click.x < 220 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
+        if 0 < click.x < 60 and 360 < click.y < 440:
+            val1 = 1
 
 
 
