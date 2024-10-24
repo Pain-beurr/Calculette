@@ -19,7 +19,11 @@ class Calculette:
         huit = self.g.afficherTexte("8",100,560,"white",40)
         neuf = self.g.afficherTexte("9",180,560,"white",40)
         zéro = self.g.afficherTexte("0",100,640,"white",40)
-        plus = self
+        plus = self.g.afficherTexte("+",260,400,"white",40)
+        moins = self.g.afficherTexte("-",260,460,"white",40)
+        fois = self.g.afficherTexte("x",260,520,"white",40)
+        diviser = self.g.afficherTexte("%",260,580,"white",40)
+        egal = self.g.afficherTexte("=",260,640,"white",40)
         self.g.attendreClic()
 
 c = Calculette()
