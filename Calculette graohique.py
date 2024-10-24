@@ -8,6 +8,7 @@ class Calculette:
     def __init__(self):
         self.g = ouvrirFenetre(longueur, largeur)
         self.initGraphique()
+        self.calcul()
     def initGraphique(self):
         un = self.g.afficherTexte("1",20,400,"white",40)
         deux = self.g.afficherTexte("2",100,400,"white",40)
@@ -24,9 +25,11 @@ class Calculette:
         fois = self.g.afficherTexte("x",260,520,"white",40)
         diviser = self.g.afficherTexte("%",260,580,"white",40)
         egal = self.g.afficherTexte("=",260,640,"white",40)
+        self.resultat = self.g.afficherTexte("",100,280,"white",30)
         self.g.attendreClic()
 
     def calcul(self):
+        resultat = 0
         clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
         while clic != True:
             click = self.g.attendreClic()
