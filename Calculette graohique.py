@@ -25,5 +25,5 @@ class Calculette:
         diviser = self.g.afficherTexte("%",260,580,"white",40)
         egal = self.g.afficherTexte("=",260,640,"white",40)
         self.g.attendreClic()
-        print("caca")
+
 c = Calculette()
