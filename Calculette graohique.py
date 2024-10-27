@@ -55,6 +55,7 @@ class Calculette:
             val1 = 1
         if 0 < click.x < 60 and 360 < click.y < 440:
             val1 = 1
+        print(pprraaah)
 
 
 
