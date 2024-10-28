@@ -46,8 +46,8 @@ class Calculette:
         self.chiffres = []
         val1 = ''
         resultat =''
-        val = self.g.afficherTexte(val1, 200, 75, "white", 40)
-        result = self.g.afficherTexte(resultat, 500, 75, "white", 40)
+        val = self.g.afficherTexte(val1, 100, 75, "white", 25)
+        result = self.g.afficherTexte(resultat, 400, 75, "white", 25)
         clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
         while not clic:
             click = self.g.attendreClic()
