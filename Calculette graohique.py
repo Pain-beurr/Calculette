@@ -46,8 +46,8 @@ class Calculette:
         self.chiffres = []
         val1 = ''
         resultat =''
-        val = self.g.afficherTexte(val1, 100, 75, "white", 25)
-        result = self.g.afficherTexte(resultat, 400, 75, "white", 25)
+        val = self.g.afficherTexte(val1, 100, 75, "white", 30)
+        result = self.g.afficherTexte(resultat, 450, 75, "white", 30)
         clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
         while not clic:
             click = self.g.attendreClic()
@@ -155,9 +155,10 @@ class Calculette:
             if 460 < click.x < 540 and 600 < click.y < 680:
                 operateur = '='
                 self.g.changerTexte(result, str(self.operation()))
-                resultat = ''
+                resultat = str(self.operation())
                 val1 = ''
                 self.chiffres =[]
+                self.chiffres.append(resultat)
 
 
 
