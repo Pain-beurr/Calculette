@@ -52,7 +52,7 @@ class Calculette:
             click = self.g.attendreClic()
 
             # Ligne 1 (Fonctions)
-            if 500 < click.x < 580 and 160 < click.y < 240:
+            if 480 < click.x < 520 and 140 < click.y < 180:
                 operateur = "/"
                 self.chiffres.append(str(operateur))
                 self.g.changerTexte(val1, val1 + str(operateur))
@@ -60,7 +60,7 @@ class Calculette:
 
 
             # Ligne 2 (7, 8, 9, x)
-            if 50 < click.x < 130 and 280 < click.y < 360:
+            if 30 < click.x < 70 and 110 < click.y < 150:
                 chiffre = 7
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val1, val1 + str(chiffre))
