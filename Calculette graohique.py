@@ -9,11 +9,12 @@ class Calculette:
         self.g = ouvrirFenetre(longueur, largeur)
         self.initGraphique()
         self.calcul()
-        self.val1 = 0
-        self.val2 = 0
-        self.aff = 0
+
 
     def initGraphique(self):
+        #Ligne séparant calculette et résultat
+        self.g.dessinerLigne(0,120,550,120,"white",4)
+
         # Ligne 1 (Fonctions)
         diviser = self.g.afficherTexte("/", 500, 160, "orange", 40)
 
@@ -36,15 +37,17 @@ class Calculette:
         plus = self.g.afficherTexte("+", 500, 520, "orange", 40)
 
         # Ligne 5 (0, ., =)
-        AC = self.g.afficherTexte("AC", 50, 640, "white", 40)
+        AC = self.g.afficherTexte("AC", 50, 640, "orange", 40)
         zéro = self.g.afficherTexte("0", 200, 640, "white", 40)
-        point = self.g.afficherTexte(".", 350, 640, "white", 40)
+        point = self.g.afficherTexte(",", 350, 640, "white", 40)
         egal = self.g.afficherTexte("=", 500, 640, "orange", 40)
 
     def calcul(self):
         self.chiffres = []
         val1 = ''
-        val = self.g.afficherTexte(val1, 200, 40, "white", 20)
+        resultat =''
+        val = self.g.afficherTexte(val1, 200, 75, "white", 40)
+        result = self.g.afficherTexte(resultat, 500, 75, "white", 40)
         clic = False  # Boucle qui nous permet de faire tourner le programme a l'infini
         while not clic:
             click = self.g.attendreClic()
@@ -134,7 +137,9 @@ class Calculette:
                 fonction = 'AC'
                 self.chiffres = []
                 self.g.changerTexte(val, '')
+                self.g.changerTexte(result,'')
                 val1 = ''
+                resultat = ''
 
             if 160 < click.x < 240 and 600 < click.y < 680:
                 chiffre = 0
@@ -149,9 +154,12 @@ class Calculette:
                 val1 += str(fonction)
             if 460 < click.x < 540 and 600 < click.y < 680:
                 operateur = '='
-                self.g.changerTexte(val, str(self.operation()))
+                self.g.changerTexte(result, str(self.operation()))
+                resultat = ''
                 val1 = ''
                 self.chiffres =[]
+
+
 
 
 
