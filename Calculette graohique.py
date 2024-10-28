@@ -40,8 +40,6 @@ class Calculette:
         zéro = self.g.afficherTexte("0", 200, 640, "white", 40)
         point = self.g.afficherTexte(".", 350, 640, "white", 40)
         egal = self.g.afficherTexte("=", 500, 640, "orange", 40)
-        self.resultat = self.g.afficherTexte("",100,280,"white",30)
-        self.g.attendreClic()
 
     def calcul(self):
         self.chiffres = []
@@ -52,7 +50,7 @@ class Calculette:
             click = self.g.attendreClic()
 
             # Ligne 1 (Fonctions)
-            if 480 < click.x < 520 and 140 < click.y < 180:
+            if 460 < click.x < 540 and 120 < click.y < 200:
                 operateur = '/'
                 self.chiffres.append(str(operateur))
                 self.g.changerTexte(val, val1 + operateur)
@@ -60,97 +58,106 @@ class Calculette:
 
 
             # Ligne 2 (7, 8, 9, x)
-            if 30 < click.x < 70 and 260 < click.y < 300:
+
+
+            if 10 < click.x < 90 and 240 < click.y < 320:
                 chiffre = 7
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 180 < click.x < 220 and 260 < click.y < 300:
+
+            if 160 < click.x < 240 and 240 < click.y < 320:
                 chiffre = 8
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 330 < click.x < 370 and 260 < click.y< 300:
+            if 310 < click.x < 390 and 240 < click.y< 320:
                 chiffre = 9
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 480 < click.x < 520 and 260 < click.y < 300:
+
+            if 460 < click.x < 540 and 240 < click.y < 320:
                 operateur = 'x'
                 self.chiffres.append('*')
                 self.g.changerTexte(val, val1 + operateur)
                 val1 += str(operateur)
 
             # Ligne 3 (4, 5, 6, -)
-            if 30 < click.x < 70 and 380 < click.y < 420:
+            if 10 < click.x < 90 and 360 < click.y < 440:
                 chiffre = 4
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 180 < click.x < 220 and 380 < click.y < 420:
+
+            if 160 < click.x < 240 and 360 < click.y < 440:
                 chiffre = 5
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 330 < click.x < 370 and 380 < click.y < 420:
+
+            if 310 < click.x < 390 and 360 < click.y < 440:
                 chiffre = 6
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 480 < click.x < 520 and 380 < click.y < 420:
+            if 460 < click.x < 540 and 360 < click.y < 440:
                 operateur = '-'
                 self.chiffres.append(str(operateur))
                 self.g.changerTexte(val, val1 + operateur)
                 val1 += str(operateur)
 
             # Ligne 4 (1, 2, 3, +)
-            if 50 < click.x < 130 and 500 < click.y < 540:
+            if 10 < click.x < 90 and 480 < click.y < 560:
                 chiffre = 1
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 200 < click.x < 280 and 500 < click.y < 540:
+            if 160 < click.x < 240 and 480 < click.y < 560:
                 chiffre = 2
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 350 < click.x < 430 and 500 < click.y < 540:
+            if 310 < click.x < 390 and 480 < click.y < 560:
                 chiffre = 3
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 500 < click.x < 580 and 500 < click.y < 540:
+            if 460 < click.x < 540 and 480 < click.y < 560:
                 operateur = '+'
                 self.chiffres.append(str(operateur))
                 self.g.changerTexte(val, val1 + str(operateur))
                 val1 += str(operateur)
 
             # Ligne 5 (0, ., =)
-            if 50 < click.x < 130 and 620 < click.y < 660:
+            if 10 < click.x < 90 and 600 < click.y < 680:
                 fonction = 'AC'
                 self.chiffres = []
                 self.g.changerTexte(val, '')
                 val1 = ''
 
-            if 200 < click.x < 280 and 620 < click.y < 660:
+            if 160 < click.x < 240 and 600 < click.y < 680:
                 chiffre = 0
                 self.chiffres.append(str(chiffre))
                 self.g.changerTexte(val, val1 + str(chiffre))
                 val1 += str(chiffre)
-            if 350 < click.x < 430 and 620 < click.y < 660:
+
+            if 310 < click.x < 390 and 600 < click.y < 680:
                 fonction = '.'
                 self.chiffres.append(str(fonction))
                 self.g.changerTexte(val, val1 + str(fonction))
                 val1 += str(fonction)
-            if 500 < click.x < 580 and 620 < click.y < 660:
+            if 460 < click.x < 540 and 600 < click.y < 680:
                 operateur = '='
                 self.g.changerTexte(val, str(self.operation()))
-                val1 = str(self.operation())
+                val1 = ''
+                self.chiffres =[]
 
 
 
     def operation(self):
         calc = ''.join(self.chiffres).replace('=', '')
+        print(self.chiffres)
         res = eval(calc)
         return res
 
