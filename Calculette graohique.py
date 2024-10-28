@@ -172,6 +172,7 @@ class Calculette:
                 self.chiffres.append(str(fonction))
                 self.g.changerTexte(val, val1 + str(fonction))
                 val1 += str(fonction)
+
             if 460 < click.x < 540 and 600 < click.y < 680:
                 operateur = '='
                 self.g.changerTexte(result, str(self.operation()))
