@@ -17,6 +17,9 @@ class Calculette:
 
         # Ligne 1 (Fonctions)
         diviser = self.g.afficherTexte("/", 500, 160, "orange", 40)
+        racine = self.g.afficherTexte('√',350,160,"orange",40)
+        carré = self.g.afficherTexte('^2',200,160,'orange',40)
+        exposant = self.g.afficherTexte('^',50,160,'orange',40)
 
         # Ligne 2 (7, 8, 9, x)
         sept = self.g.afficherTexte("7", 50, 280, "white", 40)
@@ -59,6 +62,23 @@ class Calculette:
                 self.g.changerTexte(val, val1 + operateur)
                 val1 += str(operateur)
 
+            if 310 <click.x<390 and 120<click.y<200:
+                operateur = '**(0.5)'
+                self.chiffres.append(str(operateur))
+                self.g.changerTexte(val, '√'+val1)
+                val1 += '√'
+
+            if 160 <click.x<240 and 120<click.y<200:
+                operateur ='**2'
+                self.chiffres.append(str(operateur))
+                self.g.changerTexte(val,val1+'^2')
+                val1 += '^2'
+
+            if 10<click.x<90 and 120<click.y<200:
+                operateur = '**'
+                self.chiffres.append(str(operateur))
+                self.g.changerTexte(val, val1+'^')
+                val1+='^'
 
             # Ligne 2 (7, 8, 9, x)
 
@@ -172,7 +192,7 @@ class Calculette:
 
 
 
-
+print(9**3)
 
 
 c = Calculette()
