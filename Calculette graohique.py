@@ -186,13 +186,12 @@ class Calculette:
 
     def operation(self):
         calc = ''.join(self.chiffres).replace('=', '')
-        print(self.chiffres)
         res = eval(calc)
         return res
 
 
 
-print(9**3)
+
 
 
 c = Calculette()
