@@ -185,7 +185,9 @@ class Calculette:
 
 
     def operation(self):
-        calc = ''.join(self.chiffres).replace('=', '')
+        print(self.chiffres)
+        calc = ''.join(self.chiffres)
+        print(calc)
         res = eval(calc)
         return res
 
